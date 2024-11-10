@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <rect width="200" height="200" rx="100" fill="#E0F7FA"/>
+  
+  <!-- Wave Path -->
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M30 50C20 65 40 85 60 70C80 55 120 70 140 60C160 50 180 70 170 85C160 100 130 85 110 90C90 95 60 110 50 90C40 70 60 35 30 50Z" fill="#00796B"/>
+  
+  <!-- Text "Webz Wave" -->
+  <text x="50%" y="80%" fill="#212833" font-family="Verdana" font-size="24" font-weight="bold" text-anchor="middle">Webz Wave</text>
+</svg>
+
