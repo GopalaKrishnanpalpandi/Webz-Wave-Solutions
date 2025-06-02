@@ -1,0 +1,27 @@
+.floating-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  will-change: transform;
+  transition: transform 300ms ease-out;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.floating-card-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.floating-card-glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: overlay;
+}
