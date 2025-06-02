@@ -1,0 +1,193 @@
+/* Balanced responsive styles that maintain proper alignment on both mobile and desktop */
+
+/* Base container styles */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* Logo sizing - maintains proper proportions across devices */
+.logo-standard {
+  height: 2.5rem; /* 40px */
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+.logo-small {
+  height: 2rem; /* 32px */
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .logo-standard {
+    height: 2.75rem; /* 44px */
+  }
+  
+  .logo-small {
+    height: 2.25rem; /* 36px */
+  }
+}
+
+/* Grid system that works well on both mobile and desktop */
+.grid {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+  .grid {
+    gap: 1.5rem;
+  }
+  
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    gap: 2rem;
+  }
+  
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Flex layouts that maintain alignment */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+}
+
+/* Section spacing that works well on both mobile and desktop */
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* Image handling that maintains aspect ratio */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Text handling that prevents overflow */
+p, h1, h2, h3, h4, h5, h6 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* Navbar specific styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  width: 100%;
+}
+
+/* Footer specific styles */
+.footer {
+  width: 100%;
+}
+
+/* Mobile menu that doesn't break desktop */
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-menu.open {
+    display: block;
+  }
+  
+  .desktop-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-toggle {
+    display: none;
+  }
+  
+  .desktop-menu {
+    display: flex;
+  }
+}

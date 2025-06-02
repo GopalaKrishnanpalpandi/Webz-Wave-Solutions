@@ -1,0 +1,98 @@
+/* Responsive fixes for better alignment on all devices */
+
+/* Global fixes */
+html {
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape on iOS */
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Fix for mobile viewport height issues (iOS Safari) */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Improve form elements on mobile */
+input, 
+select, 
+textarea {
+  font-size: 16px !important; /* Prevents zoom on focus in iOS */
+  max-width: 100%;
+}
+
+/* Prevent overflow issues */
+.container {
+  overflow-x: hidden;
+}
+
+/* Improve image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for mobile navigation */
+.fixed {
+  position: fixed !important;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  button, 
+  a, 
+  [role="button"] {
+    min-height: 44px; /* Apple's recommended minimum touch target size */
+    min-width: 44px;
+  }
+  
+  /* Improve spacing on mobile */
+  .section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Fix for mobile form elements */
+  .grid-cols-1 {
+    gap: 1rem !important;
+  }
+}
+
+/* Fix for iOS input shadows */
+input, 
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Fix for sticky elements on iOS */
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+/* Fix for mobile scrolling */
+.overflow-auto,
+.overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix for mobile padding */
+@media (max-width: 640px) {
+  .px-6 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .py-16 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}

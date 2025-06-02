@@ -1,0 +1,71 @@
+/* Simple alignment fixes */
+
+/* Basic container alignment */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Fix for images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Logo specific fixes */
+.logo-image {
+  max-height: 40px;
+  width: auto;
+}
+
+.footer-logo {
+  max-height: 32px;
+  width: auto;
+}
+
+/* Grid alignment */
+.grid {
+  display: grid;
+  width: 100%;
+}
+
+/* Fix for mobile */
+@media (max-width: 640px) {
+  .mobile-center {
+    text-align: center;
+  }
+  
+  .mobile-full-width {
+    width: 100%;
+  }
+}
+
+/* Fix for flex layouts */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Fix for text */
+p, h1, h2, h3, h4, h5, h6 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
