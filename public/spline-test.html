@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spline 3D Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .iframe-container {
+            width: 100%;
+            height: 500px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .loading { background: #fff3cd; color: #856404; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spline 3D Embed Test</h1>
+        <p>Testing direct iframe embed of Spline 3D content:</p>
+        
+        <div id="status" class="status loading">Loading 3D content...</div>
+        
+        <div class="iframe-container">
+            <iframe 
+                id="splineFrame"
+                src="https://my.spline.design/celestialflowabstractdigitalform-ySiLbRvR1pLZIEeGlIPxe5xB/" 
+                frameborder="0"
+                title="Spline 3D Scene Test">
+            </iframe>
+        </div>
+        
+        <div>
+            <h3>Debug Information:</h3>
+            <p><strong>URL:</strong> https://my.spline.design/celestialflowabstractdigitalform-ySiLbRvR1pLZIEeGlIPxe5xB/</p>
+            <p><strong>User Agent:</strong> <span id="userAgent"></span></p>
+            <p><strong>Browser:</strong> <span id="browserInfo"></span></p>
+        </div>
+    </div>
+
+    <script>
+        const iframe = document.getElementById('splineFrame');
+        const status = document.getElementById('status');
+        
+        // Set user agent info
+        document.getElementById('userAgent').textContent = navigator.userAgent;
+        document.getElementById('browserInfo').textContent = 
+            navigator.userAgent.includes('Chrome') ? 'Chrome' :
+            navigator.userAgent.includes('Firefox') ? 'Firefox' :
+            navigator.userAgent.includes('Safari') ? 'Safari' :
+            navigator.userAgent.includes('Edge') ? 'Edge' : 'Unknown';
+        
+        iframe.onload = function() {
+            status.className = 'status success';
+            status.textContent = '✅ 3D content loaded successfully!';
+            console.log('Spline iframe loaded successfully');
+        };
+        
+        iframe.onerror = function(e) {
+            status.className = 'status error';
+            status.textContent = '❌ Failed to load 3D content';
+            console.error('Spline iframe failed to load:', e);
+        };
+        
+        // Check if iframe is blocked after 10 seconds
+        setTimeout(() => {
+            if (status.textContent.includes('Loading')) {
+                status.className = 'status error';
+                status.textContent = '⚠️ 3D content may be blocked or taking too long to load';
+            }
+        }, 10000);
+        
+        // Log any console errors
+        window.addEventListener('error', function(e) {
+            console.error('Page error:', e.message, e.filename, e.lineno);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+User-agent: Twitterbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+User-agent: facebookexternalhit
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /.env
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /node_modules/
+Disallow: /package-lock.json
+Disallow: /package.json
+Disallow: /tsconfig.json
+Disallow: /vite.config.ts
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
