@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>WebZ Wave Solutions | Web Development & Digital Marketing Agency</title>
+    <meta name="description" content="WebZ Wave Solutions is a leading digital agency providing web development, digital marketing, data science, graphic design, and CRM solutions." />
+    <meta name="author" content="WebZ Wave Solutions" />
+
+    <meta property="og:title" content="WebZ Wave Solutions | Web Development & Digital Marketing Agency" />
+    <meta property="og:description" content="WebZ Wave Solutions is a leading digital agency providing web development, digital marketing, data science, graphic design, and CRM solutions." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webzwave" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Security Headers - CSP disabled for 3D runtime testing -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.gpteng.co https://www.google.com https://maps.googleapis.com 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://images.unsplash.com https://lovable.dev https://*.googleapis.com https://*.gstatic.com; connect-src 'self' blob: data:; frame-src 'self' https://www.google.com https://maps.google.com https://*.googleapis.com; worker-src 'self' blob: data:; child-src 'self' blob: data:; object-src 'self' blob: data:;"> -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- X-Frame-Options removed to allow 3D content embedding -->
+    <!-- <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"> -->
+
+    <link rel="icon" href="/logo-png.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap">
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script
+      src="https://cdn.gpteng.co/gptengineer.js"
+      type="module"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Security monitoring script -->
+    <script>
+      // Simple security monitoring
+      window.addEventListener('error', function(e) {
+        console.warn('JavaScript error detected:', e.message);
+        // In production, you might want to log this to a security monitoring service
+      });
+
+      // Detect if DevTools is open (basic anti-tampering)
+      function detectDevTools() {
+        const threshold = 160;
+        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+        if (widthThreshold || heightThreshold) {
+          console.warn('DevTools may be open');
+          // In production, you might want to take additional security measures
+        }
+      }
+
+      // Check periodically
+      setInterval(detectDevTools, 1000);
+    </script>
+  </body>
+</html>
